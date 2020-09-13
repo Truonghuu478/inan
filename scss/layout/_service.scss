@@ -1,0 +1,13 @@
+.Service {
+    
+
+    @import '../component/dichvu/banner';
+
+    .linkDV {
+
+        @include link();
+    }
+
+
+    @import "../component/dichvu/explain";
+}

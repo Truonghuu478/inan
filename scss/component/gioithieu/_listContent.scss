@@ -1,0 +1,60 @@
+.listContent {
+    margin: $m2 0;
+
+    &__menu {
+        @include iconsMenuList();
+    }
+
+    &__left {
+
+
+        @include listDetail();
+    }
+
+    &__right {
+        &__title {
+            position: relative;
+
+            h2 {
+                font-weight: bold;
+                color: $green2;
+                padding: 5px 0px;
+
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 60px;
+                height: 4px;
+                background: $green2;
+                display: block;
+                bottom: 0px;
+                left: 0;
+            }
+        }
+
+        &__content {
+            p {
+                font-size: 16px;
+                text-align: justify;
+                display: block;
+            }
+
+        }
+    }
+
+    @include Responsive(991px) {
+        &__menu {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width:991px) {
+
+        &__left {
+            display: none;
+        }
+    }
+
+}

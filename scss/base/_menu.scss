@@ -1,0 +1,113 @@
+.menu__nav {
+    @include menu-toogler();
+
+
+
+
+    ul {
+        .nav-children {
+            li {
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $gray1;
+
+                    a {
+                        color: white;
+                    }
+                }
+
+                a {
+
+                    text-transform: lowercase;
+                }
+            }
+        }
+
+        .menu__list__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+
+
+        }
+
+        li {
+            border-bottom: 1px solid $dark1;
+            transition: background 0.4s;
+            padding: 7px;
+
+            &:hover {
+                background-color: $gray1;
+
+                a {
+                    color: white;
+
+                }
+            }
+
+
+            .menu__list__icon {
+                margin-left: auto;
+                cursor: pointer;
+                background-color: transparent;
+
+                i {
+                    display: flex;
+                    width: 30px;
+                    font-size: 1.5rem;
+                    height: 30px;
+                    background: black;
+                    text-align: center;
+                    line-height: 30px;
+                    color: white;
+                    padding-left: 3px;
+                    font-weight: bold;
+                    margin-left: 10px;
+                    overflow: hidden;
+                }
+
+
+
+
+            }
+
+            a {
+                width: 80%;
+                transition: color 0.4s;
+                color: $gray1;
+                font-weight: bold;
+                font-size: 0.9rem;
+            }
+        }
+
+        .active {
+            background-color: $gray1;
+
+            a {
+                color: white;
+
+            }
+        }
+    }
+
+
+}
+
+.active-menu {
+    left: 0;
+
+}
+
+@include Responsive(768px) {
+
+    .active-menu {
+
+        opacity: 0;
+        left: -400px;
+
+
+    }
+}

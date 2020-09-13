@@ -1,0 +1,143 @@
+.explain {
+    background-color: $gray3;
+
+    &__title {
+
+        align-items: center;
+        @include title-group(50%, 26%, 26%);
+
+        h2 {
+
+            padding-top: 1.2rem;
+        }
+
+        i {
+
+            width: 35px;
+            height: 35px;
+            background-color: white;
+            border: 1px solid $gray3;
+            border-radius: 50%;
+            line-height: 35px;
+
+
+        }
+    }
+
+    &__content {
+        margin: 3rem 0;
+
+        &__item {
+            position: relative;
+            text-align: center;
+            border: 1px solid #dbcdcd;
+            height: 200px;
+            box-shadow: 12px 11px 12px -6px;
+
+
+            .item__icons {
+
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                position: absolute;
+                top: -30%;
+                left: 50%;
+                transform: translate(-50%, 0);
+
+                line-height: 94px;
+                transition: all 0.6s;
+                cursor: pointer;
+
+
+
+            }
+
+            .icons-like {
+                background-color: #ff3e73;
+                border: 7px solid transparent;
+
+
+                &:hover {
+                    border-color: #ff6e9f;
+                }
+            }
+
+            .icons-sp {
+                background-color: yellow;
+                border: 7px solid transparent;
+
+
+                &:hover {
+                    border-color: #ade8fa;
+                }
+            }
+
+            .icons-pig {
+
+                background-color: #fd5b4e;
+                border: 7px solid transparent;
+
+                &:hover {
+                    border-color: #ff897d;
+                }
+
+            }
+
+            .icons-chair {
+                background-color: #ffa63e;
+                border: 7px solid transparent;
+
+                &:hover {
+                    border-color: #fdc56e;
+                }
+            }
+
+            .icons-card {
+                background-color: #7cc171;
+                border: 7px solid transparent;
+
+                &:hover {
+                    border-color: #bee46a;
+                }
+
+            }
+        }
+
+        .icons-ship {
+            background-color: #63dde8;
+            border: 7px solid transparent;
+
+            &:hover {
+                border-color: #90ebf0;
+            }
+
+
+        }
+
+        .item__content {
+            overflow: hidden;
+            height: 100%;
+            line-height: 30px;
+
+            //titel
+            .item__title {
+                text-transform: uppercase;
+                font-weight: bold;
+                color: $gray1;
+                padding-top: 3rem;
+            }
+
+            // text 
+            .item__text {
+                color: $gray2;
+                height: 50px;
+            }
+        }
+
+
+
+
+
+    }
+}

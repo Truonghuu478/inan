@@ -1,0 +1,156 @@
+    .intro {
+        background-color: $bg-intro;
+        // margin-top: 2rem;
+        padding: 30px;
+
+        &__content {
+            width: 100%;
+
+            &--left {
+                margin: 0 auto;
+                width: 90%;
+                text-align: center;
+
+                h2 {
+                    @include title($sp3);
+                    position: relative;
+                    height: auto;
+                    margin-bottom: $m2;
+
+                    &:after {
+                        position: absolute;
+                        bottom: -5px;
+                        transform: translateX(-50%);
+                        left: 50%;
+                        content: "";
+                        display: block;
+                        width: 10%;
+                        height: 3px;
+                        background-color: $orange1;
+
+                    }
+                }
+
+                span {
+                    color: $gray1;
+                    letter-spacing: $sp1;
+                    font-weight: bold;
+                }
+
+                .left__text {
+                    height: 60px;
+                    overflow: hidden;
+                    margin-top: $m2;
+                    font-size: 0.8rem;
+                    text-align: center;
+                    color: $gray1;
+
+                }
+
+                button {
+                    font-weight: 600;
+                    cursor: pointer;
+                    margin-top: 1rem;
+                    transition: all 0.6s;
+                    text-transform: uppercase;
+                    @include button1($green1, 150px, 40px, 40px);
+                    color: $green1;
+
+                    &:hover {
+                        background-color: $green1;
+                        color: white;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            &--right {
+                img {
+                    box-shadow: 0 3px 6px -4px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+                    object-fit: cover;
+                    width: 100%;
+                    // height: 100%;
+                }
+            }
+
+        }
+
+
+        @media screen and (min-width: 768px) and(max-width:882px) {
+            &__content {
+                width: 100%;
+
+                &--left {
+
+
+                    h2 {
+                        font-size: 1.5rem;
+                        letter-spacing: 2px;
+                    }
+
+                }
+            }
+        }
+
+        @media screen and(max-width:768px) {
+            &__content {
+                &--left {
+                    margin-bottom: 20px;
+
+                    h2 {
+                        font-size: 1.5rem;
+                    }
+
+                    button {
+                        width: 100px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+
+        @media screen and (max-width:480px) {
+            &__content {
+                width: 100%;
+
+                &--left {
+
+
+                    h2 {
+                        @include title($sp1);
+                        position: relative;
+                        height: auto;
+                        margin-bottom: $m1;
+                        line-height: 34px;
+                        letter-spacing: 2px;
+                        font-size: 1.2rem;
+
+                        &:after {
+                            position: absolute;
+                            bottom: -5px;
+                            transform: translateX(-50%);
+                            left: 50%;
+                            content: "";
+                            display: block;
+                            width: 10%;
+                            height: 3px;
+                            background-color: $orange1;
+
+                        }
+                    }
+
+                    button {
+                        font-size: 14px;
+                    }
+
+
+
+                }
+            }
+        }
+
+    }

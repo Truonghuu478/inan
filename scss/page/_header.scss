@@ -1,0 +1,182 @@
+.header {
+
+
+    padding: 30px 15px;
+
+    @include Responsive(340px) {
+        text-align: right;
+
+        &__logo {
+            padding: 0;
+
+            width: 25%;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                // max-width: 74.8px;
+                // max-height: 49.64px;
+            }
+        }
+
+        &__title {
+            padding: 0;
+            width: 75%;
+            justify-content: space-between;
+            align-items: center;
+
+            &--name {
+                letter-spacing: $sp1;
+                color: $color-black1;
+
+                text-transform: uppercase;
+
+                font-size: 20px;
+
+
+                font-weight: 600;
+
+                span {
+
+                    color: $green1;
+                }
+            }
+
+            &--address {
+                display: none;
+
+
+            }
+
+            &--email {
+                color: $red1;
+                margin-bottom: 0;
+
+            }
+
+        }
+
+        &__phone {
+            display: none;
+        }
+
+
+    }
+
+
+
+    @include Responsive(601px) {
+        &__logo {
+
+            width: 20%;
+        }
+
+        &__title {
+            width: 50%;
+
+            &--address {
+                display: block;
+                text-align: center;
+                color: $color-black1;
+                margin-bottom: 0;
+                font-size: 15px;
+
+            }
+        }
+
+        text-align: center;
+
+        &__phone {
+            width: 30%;
+            display: flex;
+
+
+            &--button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid $red1;
+                width: 100%;
+                height: 40px;
+                border-radius: 20px;
+                line-height: 40px;
+                justify-content: space-evenly;
+                color: $red1;
+
+                span {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    // set button 
+    @media only screen and (min-width:601px) and (max-width:767px) {
+        &__phone {
+            // width: 20%;
+
+            &--button {
+
+                // padding: 2px 4px;
+
+                display: inherit;
+
+            }
+
+        }
+    }
+
+    @media only screen and (min-width:768px) and (max-width:991px) {
+        &__title {
+            width: 60%;
+
+        }
+
+        &__phone {
+            width: 20%;
+        }
+    }
+
+
+
+    @media only screen and (min-width:992px) {
+        &__title {
+            width: 65%;
+        }
+
+        &__phone {
+            width: 15%;
+        }
+    }
+
+    @media only screen and (min-width:992px) and (max-width:1199px) {
+
+
+        &__title {
+            &--name {
+                letter-spacing: 6px;
+
+                font-size: 2.3rem;
+
+            }
+
+        }
+    }
+
+
+    @include Responsive(1200px) {
+        &__title {
+            &--name {
+
+                font-size: 2rem;
+
+            }
+        }
+    }
+
+
+
+
+
+
+}

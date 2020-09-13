@@ -1,0 +1,22 @@
+.carousel1 {
+
+    // height: 505px;
+    &__content {
+
+
+        .slick-prev,
+        .slick-next {
+            display: none !important;
+        }
+
+
+
+        &--item {
+            img {
+                width: 100%;
+                object-fit: fill;
+                height: 100%;
+            }
+        }
+    }
+}

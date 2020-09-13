@@ -1,0 +1,10 @@
+.Product {
+    @import '../component/product/banner';
+
+    .linkPD {
+
+        @include link();
+    }
+
+    @import '../component/product/_listProduct.scss';
+}

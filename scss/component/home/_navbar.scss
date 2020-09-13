@@ -1,0 +1,196 @@
+.navbar {
+    background: $green1;
+    padding: 0;
+
+    &-toggler {
+        // cursor: pointer;
+
+        i {
+            font-size: 3rem;
+            color: white;
+
+        }
+
+
+    }
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &-collapse {
+        .navbar-nav {
+            .nav-item {
+                padding: 5px 0;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: $gray1;
+                }
+
+
+                .nav-link {
+                    padding: 10px 20px;
+                    color: white;
+                    text-transform: uppercase;
+                }
+            }
+
+            .item--border {
+                display: flex;
+                align-items: center;
+                position: relative;
+
+                .nav__children {
+                    @include list-li();
+                    z-index: 9999;
+
+                    left: 0;
+
+
+
+                    li {
+                        width: 100%;
+                        padding: 7px 18px;
+                        border: 1px solid green;
+                        cursor: pointer;
+                        background-color: white;
+                        overflow: hidden;
+
+                        a {
+                            color: black;
+                        }
+
+                        &:hover {
+                            background-color: $gray1;
+
+                            a {
+                                color: white;
+                            }
+                        }
+                    }
+
+                    &--show {
+                        .nav__children2 {
+                            z-index: 9999;
+                            @include list-li();
+                            bottom: -60px;
+
+                            left: 230px;
+
+                            li {
+                                background-color: white;
+
+
+                                &:hover {
+
+
+                                    background-color: $gray1;
+
+                                    a {
+                                        color: white;
+                                    }
+
+
+                                }
+
+                                a {
+                                    color: black;
+                                }
+                            }
+
+                        }
+
+                        &:hover {
+                            .nav__children2 {
+
+                                opacity: 1;
+                                bottom: 0px;
+
+
+                            }
+
+
+
+                        }
+                    }
+
+
+                }
+
+
+                &:hover {
+                    .nav__children {
+                        opacity: 1;
+                        bottom: -80px;
+                    }
+
+                    &:after {
+                        opacity: 0;
+                    }
+                }
+
+                &::after {
+                    opacity: 1;
+                    content: "";
+                    transition: all 0.6s;
+                    background: white;
+                    width: 1px;
+                    height: 20px;
+                    display: inline-block;
+                }
+
+            }
+
+            .active {
+                .item--border {
+                    &::after {
+                        opacity: 0;
+                    }
+                }
+
+                background-color: $gray1;
+            }
+        }
+    }
+
+    @media screen and (min-width:768px) and (max-width:967px) {
+        &-collapse {
+            .navbar-nav {
+                .nav-item {
+
+
+                    &:hover {
+                        background-color: $gray1;
+                    }
+
+
+                }
+
+                .item--border {
+
+
+                    .nav__children {
+                        width: 100px;
+
+                        &--show {
+                            .nav__children2 {
+
+
+                                left: 100px;
+
+
+
+                            }
+
+                        }
+
+
+                    }
+                }
+
+
+            }
+        }
+    }
+}
