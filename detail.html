@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Công ty TNHH GIA PHAT</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- link material font  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <!-- slick  -->
+    <link rel="stylesheet" href="./vender/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./vender/slick-1.8.1/slick/slick-theme.css">
+    <!-- link font awsome  -->
+    <!-- link light box  -->
+    <link rel="stylesheet" href="./vender/lightbox2-dev/dist/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- header  -->
+    <header id="header " class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="header__logo   ">
+                    <img src="./img/logo.png" alt="logo">
+                </div>
+                <div class="header__title  ">
+                    <h2 class="header__title--name">
+                        công ty tnhh kỹ thuật <span>gia phát</span>
+                    </h2>
+                    <p class="header__title--address">492/7 Nguyễn Thị Minh Khai, Phường 02, Quận 3, TPHCM</p>
+                    <p class="header__title--email ">
+                        info@gmail.com
+                    </p>
+                </div>
+                <div class="header__phone ">
+                    <div class="header__phone--button">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>0912345678</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- .menu__tab  -->
+    <div id="menu-nav" class="menu__nav">
+        <ul style="list-style: none; text-transform: uppercase;padding: 20px;">
+            <li id="menu-index" class=""><a href="./index.html">Trang chủ</a></li>
+            <li id="menu-gioithieu"><a href="./gioithieu.html">Giới thiệu</a></li>
+            <li id="menu-dichvu" class="menu__list__item list-dv">
+                <a id="a-dv" href="./dichvu.html">Dịch Vụ</a>
+                <div class="menu__list__icon navbar-expand-md collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapse1" aria-expanded="false">
+                    <i id="plus" class="material-icons">addbox</i>
+                    <i style="display: none;" id="minus" class="fa fa-minus"></i>
+                </div>
+
+            </li>
+            <ul id="collapse1" class="nav-children collapse navbar-collapse">
+                <li class="nav-item"><a href="#">cart 1</a></li>
+                <li class="nav-item"><a href="#">cart 2</a></li>
+
+            </ul>
+            <li id="menu-sanpham" class="menu__list__item"><a id="a-sp" href="sanpham.html">sản phẩm
+
+                </a>
+                <div class="menu__list__icon navbar-expand-md collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapse2" aria-expanded="false">
+                    <i id="plus1" class="material-icons">addbox</i>
+                    <i style="display: none;" id="minus1" class="fa fa-minus"></i>
+                </div>
+
+            </li>
+            <ul id="collapse2" class="nav-children collapse navbar-collapse">
+                <li class="nav-item"><a href="#">cart 1</a></li>
+                <li class="nav-item"><a href="#">cart 2</a></li>
+
+            </ul>
+            <li id="menu-tintuc"><a href="tintuc.html">tin tức</a></li>
+            <li id="menu-lienhe"><a href="lienhe.html">liên hệ</a></li>
+        </ul>
+    </div>
+    <!-- bg-dark  -->
+    <div id="over-dark" onclick="handleOver()" class="over-dark"></div>
+
+    <!-- navbar  -->
+
+    <nav id="navbar" class="navbar navbar-expand-md ">
+
+        <button id="btn-menu" onclick="handleMenu()" class="navbar-toggler " type="button" data-toggle="collapse"
+            data-target="#11" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+
+            <i class="material-icons ">dashboard</i>
+
+        </button>
+        <div class="collapse navbar-collapse" id="navbar11">
+            <ul class="navbar-nav item--border m-auto">
+                <li id="index" class="nav-item ">
+                    <a class="nav-link" href="./index.html">trang chủ</a>
+                </li>
+                <li id="gioithieu" class="nav-item item--border ">
+                    <a class="nav-link " href="./gioithieu.html">giới thiệu</a>
+                </li>
+                <li id="dichvu" class="nav-item item--border ">
+                    <a class="nav-link " href="./dichvu.html">dịch vụ</a>
+                    </a>
+
+                    <ul class="nav__children">
+                        <li>
+                            <a href="#">cart 1
+
+                        </li>
+                        <li class="nav-item"><a href="#">cart 2</a></li>
+
+                    </ul>
+
+                </li>
+                <li id="sanpham" class="nav-item item--border ">
+                    <a class="nav-link " href="./sanpham.html">sản phẩm</a>
+
+                    <ul class="nav__children ">
+                        <li class="nav-item nav__children--show ">
+                            <a href="#">cart 1 </a>
+                            <ul class="nav__children2">
+                                <li><a href="#">cart 1-1</a></li>
+                                <li><a href="#">cart 1-2</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="#">cart 2</a></li>
+
+                    </ul>
+
+                </li>
+                <li id="tintuc" class="nav-item item--border ">
+                    <a class="nav-link " href="./tintuc.html">tin tức</a>
+                </li>
+                <li id="lienhe" class="nav-item">
+                    <a class="nav-link" href="./lienhe.html">liên hệ</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <!-- menu list gioi thieu  -->
+    <div id="menu-list" class="menu__list">
+        <ul class="list-group">
+            <!-- danh muc  -->
+            <li class="list-group-item  item list-control">
+                <span>
+                    danh mục
+                </span></li>
+            <!-- in nhanh  -->
+            <li class="list-group-item  item list-item ">
+                <i class="fa fa-crosshairs"></i>
+                <span>
+                    In nhanh
+                </span></li>
+
+            <li class="list-group-item  item list-text">
+                <i class="fa fa-long-arrow-right"></i>
+
+                <span>
+                    In nhanh
+                </span></li>
+            <!-- an pham thuong mai  -->
+            <li class="list-group-item item  list-item">
+                <i class="fa fa-crosshairs"></i>
+                <span>
+                    Ấn phẩm thương mại
+                </span></li>
+            <li class="list-group-item  item   list-text">
+                <i class="fa fa-long-arrow-right"></i>
+                <span>
+                    Danh thiếp
+                </span></li>
+            <li class="list-group-item  item list-text ">
+                <i class="fa fa-long-arrow-right"></i>
+                <span>
+                    tờ rơi
+                </span></li>
+            <li class="list-group-item  item list-text ">
+                <i class="fa fa-long-arrow-right"></i>
+                <span>
+                    Thiệp cưới,thiệp mời
+                </span>
+            </li>
+            <!-- Tạp chí sách -->
+            <li class="list-group-item  item list-item ">
+                <i class="fa fa-crosshairs"></i>
+                <span>
+                    Tạp chí sách
+                </span></li>
+            <li class="list-group-item  item   list-text">
+                <i class="fa fa-long-arrow-right"></i>
+                <span>
+                    Danh thiếp
+                </span></li>
+            <li class="list-group-item  item list-text ">
+                <i class="fa fa-long-arrow-right"></i>
+                <span>
+                    tờ rơi
+                </span></li>
+            <li class="list-group-item  item list-text ">
+                <i class="fa fa-long-arrow-right"></i>
+                <span>
+                    Thiệp cưới,thiệp mời
+                </span>
+            </li>
+            <!-- In lịch, in lịch tết -->
+            <li class="list-group-item  item list-item ">
+                <i class="fa fa-crosshairs"></i>
+                <span>
+                    In lịch, in lịch tết
+                </span></li>
+            <li class="list-group-item  item   list-text">
+                <i class="fa fa-long-arrow-right"></i>
+                <span>
+                    Danh thiếp
+                </span></li>
+            <li class="list-group-item  item list-text ">
+                <i class="fa fa-long-arrow-right"></i>
+                <span>
+                    tờ rơi
+                </span></li>
+            <li class="list-group-item  item list-text ">
+                <i class="fa fa-long-arrow-right"></i>
+                <span>
+                    Thiệp cưới,thiệp mời
+                </span>
+            </li>
+            <!-- In nhãn decal mác -->
+            <li class="list-group-item  item list-item ">
+                <i class="fa fa-crosshairs"></i>
+                <span>
+                    In nhãn decal mác
+                </span></li>
+            <li class="list-group-item  item   list-text">
+                <i class="fa fa-long-arrow-right"></i>
+                <span>
+                    Danh thiếp
+                </span></li>
+            <li class="list-group-item  item list-text ">
+                <i class="fa fa-long-arrow-right"></i>
+                <span>
+                    tờ rơi
+                </span></li>
+            <li class="list-group-item  item list-text ">
+                <i class="fa fa-long-arrow-right"></i>
+                <span>
+                    Thiệp cưới,thiệp mời
+                </span>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="detail">
+        <!-- banner  -->
+        <section class="banner">
+
+            <div class="banner-over"></div>
+            <h1>chi tiết sản phẩm</h1>
+        </section>
+        <!-- link component  -->
+        <div class="linkDT">
+            <span>Trang chủ</span>
+            <i class="fas fa-long-arrow-alt-right"></i> <!-- <i class="fa fa-arrow-right"></i> -->
+            <span> sản phẩm</span>
+            <i class="fas fa-long-arrow-alt-right"></i> <span>chi tiết sản phẩm </span>
+        </div>
+
+        <section class="listDetail ">
+            <div class="container">
+                <button onclick="handleClickListInfo() " class="listDetail__menu">
+                    <i class="material-icons ">dashboard</i>
+                </button>
+
+                <div class="listDetail__content row">
+                    <div class="listDetail__left col-lg-3">
+                        <ul class="list-group">
+                            <!-- danh muc  -->
+                            <li class="list-group-item  item list-control">
+                                <span>
+                                    danh mục
+                                </span></li>
+                            <!-- in nhanh  -->
+                            <li class="list-group-item  item list-item ">
+                                <i class="fa fa-crosshairs"></i>
+                                <span>
+                                    In nhanh
+                                </span></li>
+
+                            <li class="list-group-item  item list-text">
+                                <i class="fa fa-long-arrow-right"></i>
+
+                                <span>
+                                    In nhanh
+                                </span></li>
+                            <!-- an pham thuong mai  -->
+                            <li class="list-group-item item  list-item">
+                                <i class="fa fa-crosshairs"></i>
+                                <span>
+                                    Ấn phẩm thương mại
+                                </span></li>
+                            <li class="list-group-item  item   list-text">
+                                <i class="fa fa-long-arrow-right"></i>
+                                <span>
+                                    Danh thiếp
+                                </span></li>
+                            <li class="list-group-item  item list-text ">
+                                <i class="fa fa-long-arrow-right"></i>
+                                <span>
+                                    tờ rơi
+                                </span></li>
+                            <li class="list-group-item  item list-text ">
+                                <i class="fa fa-long-arrow-right"></i>
+                                <span>
+                                    Thiệp cưới,thiệp mời
+                                </span>
+                            </li>
+                            <!-- Tạp chí sách -->
+                            <li class="list-group-item  item list-item ">
+                                <i class="fa fa-crosshairs"></i>
+                                <span>
+                                    Tạp chí sách
+                                </span></li>
+                            <li class="list-group-item  item   list-text">
+                                <i class="fa fa-long-arrow-right"></i>
+                                <span>
+                                    Danh thiếp
+                                </span></li>
+                            <li class="list-group-item  item list-text ">
+                                <i class="fa fa-long-arrow-right"></i>
+                                <span>
+                                    tờ rơi
+                                </span></li>
+                            <li class="list-group-item  item list-text ">
+                                <i class="fa fa-long-arrow-right"></i>
+                                <span>
+                                    Thiệp cưới,thiệp mời
+                                </span>
+                            </li>
+                            <!-- In lịch, in lịch tết -->
+                            <li class="list-group-item  item list-item ">
+                                <i class="fa fa-crosshairs"></i>
+                                <span>
+                                    In lịch, in lịch tết
+                                </span></li>
+                            <li class="list-group-item  item   list-text">
+                                <i class="fa fa-long-arrow-right"></i>
+                                <span>
+                                    Danh thiếp
+                                </span></li>
+                            <li class="list-group-item  item list-text ">
+                                <i class="fa fa-long-arrow-right"></i>
+                                <span>
+                                    tờ rơi
+                                </span></li>
+                            <li class="list-group-item  item list-text ">
+                                <i class="fa fa-long-arrow-right"></i>
+                                <span>
+                                    Thiệp cưới,thiệp mời
+                                </span>
+                            </li>
+                            <!-- In nhãn decal mác -->
+                            <li class="list-group-item  item list-item ">
+                                <i class="fa fa-crosshairs"></i>
+                                <span>
+                                    In nhãn decal mác
+                                </span></li>
+                            <li class="list-group-item  item   list-text">
+                                <i class="fa fa-long-arrow-right"></i>
+                                <span>
+                                    Danh thiếp
+                                </span></li>
+                            <li class="list-group-item  item list-text ">
+                                <i class="fa fa-long-arrow-right"></i>
+                                <span>
+                                    tờ rơi
+                                </span></li>
+                            <li class="list-group-item  item list-text ">
+                                <i class="fa fa-long-arrow-right"></i>
+                                <span>
+                                    Thiệp cưới,thiệp mời
+                                </span>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="listDetail__right col-lg-9 col-md-12 col-sm-12 ">
+                        <!-- information  -->
+                        <div class="right__information">
+                            <div class="information__title">
+                                thông tin chi tiết
+                            </div>
+                            <div class="information__content row">
+                                <!-- img  -->
+                                <div class="col-xl-5 col-md-5 col-lg-5 col-ms-12">
+                                    <a href="https://farm4.staticflickr.com/3721/9207329484_ba28755ec4_o.jpg"
+                                        data-lightbox="image-1" data-title="Truong dep zai">
+
+                                        <div class="information__content__image item">
+
+                                            <img src="https://farm4.staticflickr.com/3721/9207329484_ba28755ec4_o.jpg"
+                                                alt="dien-dan">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=" col-xl-7 col-md-7 col-lg-7 col-ms-12">
+                                    <div class="information__content__texts item">
+                                        <div class="information__content__texts__title">
+                                            <h2>Lịch để bàn</h2>
+                                        </div>
+                                        <p>Sách đóng lò xo là một vật dụng khá là phổ biến hiện nay đối với giới trẻ và
+                                            dân
+                                            văn phòng. Sách lò xo nhỏ gọn, dễ dàng mang theo khi cần. Kiểu dáng, mẫu mã
+                                            đa
+                                            dạng bắt mắt. Thích hợp cho việc ghi chép và viết nhật ký.</p>
+                                        <div class="information__content__texts__icons">
+                                            <img src="./img/detail/like.jpg" alt="dien-dan-facebook">
+                                            <img src="./img/detail/tw.jpg" alt="dien-dan-tweet">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- info  -->
+                        <div class="right__info">
+
+                            <div class="row">
+                                <div class=" col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                                    <div class="info__title">
+                                        Chi tiết
+                                    </div>
+                                </div>
+                                <div class=" col-xl-8 col-lg-8 col-md-8  col-sm-12">
+                                    <div class="info__content">
+                                        <div class="info__content__text">
+                                            <p>
+
+                                                Tìm hiểu về sách đóng lò xo:
+                                            </p>
+                                            <p>
+
+                                                Những quyển sách, cuốn tài liệu khi được đóng gáy lò xo (còn gọi là sách
+                                                lò
+                                                so)
+                                                vẫn
+                                                đảm
+                                                bảo được chất lượng sản phẩm sau khi thành phẩm, cũng như sự lạ mắt về
+                                                những
+                                                quyển
+                                                sách.
+                                                Hãy cũng Kalapress tìm hiểu về sách đóng lò xo
+                                            </p>
+
+                                            <p>
+
+                                                Về kích thước: Ở Việt Nam thường thì kích thước đóng sách phổ biến gồm
+                                                có(tính
+                                                chung
+                                                cho
+                                                tất cả các loại sách kể cả sách lò xo)
+                                            </p>
+                                            <p>
+
+                                                - 13x19cm (in trên khổ giấy 79x109cm),
+                                            </p>
+                                            <p>
+
+                                                - 14,5x20,5cm (in trên khổ giấy 60x84cm),
+                                            </p>
+
+
+                                        </div>
+
+                                        <div id="thu-gon" class="info__thugon">
+                                            <p>
+
+                                                - 17x24cm (in trên khổ giấy 70x100cm),
+                                            </p>
+                                            <p>
+
+                                                - 20,5 x28,5cm (in trên khổ giấy 60x84cm).
+                                            </p>
+                                            <p>
+
+                                                Về mẫu mã: Sách lò xo có 2 dạng phổ biến đó là sách đóng lò xo kiểu nằm
+                                                dọc
+                                                và
+                                                lò xo
+                                                kiểu nằm ngang. Màu sắc và các họa tiết khá phổ biến.
+                                            </p>
+
+                                            <p>
+
+                                                Công dụng sách đóng lò xo: Chúng ta có thể sử dụng sách đóng lò xo để
+                                                ghi
+                                                chép,
+                                                viết
+                                                nhật ký hoặc thiết kế hoặc vẽ bất kỳ những gì mình muốn.
+                                            </p>
+                                            <p>
+
+                                                Với nhu cầu sử dụng ngày càng cao của giới trẻ và dân văn phòng, một
+                                                cuốn
+                                                sách
+                                                lò xo
+                                                được đánh giá là có “chất lượng” thì ngoài chất liệu giấy và lò xo thì
+                                                phải
+                                                có
+                                                hình
+                                                thức, mẫu mã kiểu dáng họa tiết trên bìa sách đẹp…Công ty in ấn
+                                                Kalapress tự
+                                                tin
+                                                khẳng
+                                                định luôn đi đầu cả về chất liệu làm sách và kiểu dáng mẫu mã. Những
+                                                cuốn
+                                                sách
+                                                đóng
+                                                lò
+                                                xo được đóng gáy lò xo tại Kalapress luôn đảm bảo tính bền đẹp và giá
+                                                thành
+                                                hợp
+                                                lý
+                                                nhất.
+                                                Ngoài ra chúng tôi còn nhận chuyển và vận chuyển tới tận nơi khi Quý
+                                                khách
+                                                hàng
+                                                đặt
+                                                hàng
+                                                với số lượng lớn.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="xem-them" onclick="handleChangeHeight(true)" class="listDetail__xemthem">
+                                xem thêm
+                            </div>
+                            <div id="thu-gon-btn" onclick="handleChangeHeight(false)" class="listDetail__thugon">
+                                Thu gọn
+                            </div>
+                        </div>
+
+                        <!-- RELATED PRODUCTS -->
+                        <div class="right__related">
+                            <!-- title  -->
+                            <div class="related__title">
+                                <h2>
+                                    SẢN PHẨM LIÊN QUAN
+                                </h2>
+
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <!-- content  -->
+                            <div class="slick-detail related__content row">
+                                <!-- sp1  -->
+                                <div class=" col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item">
+
+                                        <div class="item__image">
+
+
+                                            <img src="./img/product/sp1.png" alt="sách-đóng-lò-xò">
+                                        </div>
+                                        <div class="item__text ">
+                                            <a href="detail.html">
+
+                                                sách đóng lò xò
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- sp2  -->
+                                <div class=" col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item">
+
+                                        <div class="item__image">
+
+                                            <img src="./img/product/sp2.png" alt="lịch treo tường">
+                                        </div>
+                                        <div class="item__text">
+                                            <a href="detail.html">
+                                                lịch treo tường
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- sp3  -->
+                                <div class=" col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item">
+
+                                        <div class="item__image">
+                                            <img src="./img/product/sp3.jpg" alt="in offset giá rẻ">
+                                        </div>
+                                        <div class="item__text">
+                                            <a href="detail.html">
+
+                                                in offset giá rẻ
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- sp4  -->
+                                <div class=" col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item">
+                                        <div class="item__image">
+                                            <img src="./img/product/sp4.png" alt="sách-đóng-lò-xò">
+
+                                        </div>
+                                        <div class="item__text">
+                                            <a href="detail.html">
+
+                                                sách đóng lò xò
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- sp5  -->
+                                <div class=" col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item">
+
+                                        <div class="item__image">
+
+                                            <img src="./img/product/sp5.jpg" alt=" lịch treo tường">
+                                        </div>
+                                        <div class="item__text">
+                                            <a href="detail.html">
+
+                                                lịch treo tường
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- sp6  -->
+                                <div class=" col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item">
+
+                                        <div class="item__image">
+
+                                            <img src="./img/product/sp6.png" alt="in offset giá rẻ">
+                                        </div>
+                                        <div class="item__text">
+                                            <a href="detail.html">
+
+                                                in offset giá rẻ
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- sp7 -->
+                                <div class=" col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item">
+                                        <div class="item__image">
+
+                                            <img src="./img/product/sp7.png" alt="sách-đóng-lò-xò">
+                                        </div>
+                                        <div class="item__text">
+                                            <a href="detail.html">
+
+                                                sách đóng lò xò
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- sp8 -->
+                                <div class=" col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item">
+                                        <div class="item__image">
+
+                                            <img src="./img/product/sp8.jpg" alt="lịch treo tường">
+                                        </div>
+                                        <div class="item__text">
+                                            <a href="detail.html">
+
+                                                lịch treo tường
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- sp9 -->
+                                <div class=" col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                    <div class="item">
+                                        <div class="item__image">
+
+                                            <img src="./img/product/sp9.png" alt="in offset giá rẻ">
+                                        </div>
+                                        <div class="item__text">
+                                            <a href="detail.html">
+
+                                                in offset giá rẻ
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content row">
+                <div class="col-lg-5 col-md-4 col-ms-12 footer__content__detail">
+                    <h5>CÔNG TY TNHH KỸ THUẬT SỐ GIA PHÁT</h5>
+                    <div class="detail__content">
+                        <div class="detail__content__item">
+                            <i class="fa fa-home"></i>
+                            <span>
+                                492/7 Nguyễn Thị Minh Khai, Phường 02, Quận 3, TP Hồ Chí Minh</span>
+                        </div>
+                        <div class="detail__content__item">
+                            <i class="fa fa-home"></i>
+                            <span>ĐKKD: 0305882620</span>
+                        </div>
+                        <div class="detail__content__item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span> 0963 793 793</span>
+                        </div>
+                        <div class="detail__content__item">
+                            <i class="fa fa-envelope"></i>
+                            <span>info@gmail.com</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-ms-12 footer__content__active">
+
+                    <h5>
+                        LĨNH VỰC HOẠT ĐỘNG
+                    </h5>
+                    <ul>
+                        <li> In kỹ thuật số</li>
+                        <li> In vải chuyển nhiệt</li>
+                        <li> Thi công quảng cáo</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 col-ms-12 footer__content__logo">
+                    <img class="img-fluid" src="./img/pagefb.jpg" alt="page-facebook">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- zalo  -->
+    <section class="zaloCall">
+        <div class="zaloCall__content">
+            <div class="zaloCall__content__item">
+
+                <i class="material-icons">phone</i>
+                <span>0867837422</span>
+
+
+            </div>
+            <div class="zaloCall__content__item">
+                <a href="https://chat.zalo.me/">
+                    <img src="./img/zalo.png" alt="zalo">
+                    <span>Liên hệ qua zalo</span></a>
+            </div>
+        </div>
+    </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./vender/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="./js/handleChangeHeight.js"></script>
+    <script src="./js/handleNavbar.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./vender/slick-1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slick-detail').slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                // fade: true,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                autoplay: true,
+                responsive: [{
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            autoplay: true,
+
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            autoplay: true,
+                            dots: true,
+                            autoplay: true,
+                            fade: true
+                        }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+            });
+        })
+    </script>
+    <!-- light box  -->
+    <script src="./vender/lightbox2-dev/dist/js/lightbox.min.js"></script>
+</body>
+
+
+</html>

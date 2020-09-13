@@ -1,0 +1,547 @@
+ <!doctype html>
+ <html lang="en">
+
+ <head>
+     <title>Công ty TNHH GIA PHAT</title>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+     <!-- link material font  -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+     <!-- link font awsome  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" href="./css/style.css">
+ </head>
+
+ <body>
+     <!-- header  -->
+     <header id="header " class="header">
+         <div class="container">
+             <div class="row align-items-center">
+                 <div class="header__logo   ">
+                     <img src="./img/logo.png" alt="logo">
+                 </div>
+                 <div class="header__title  ">
+                     <h2 class="header__title--name">
+                         công ty tnhh kỹ thuật <span>gia phát</span>
+                     </h2>
+                     <p class="header__title--address">492/7 Nguyễn Thị Minh Khai, Phường 02, Quận 3, TPHCM</p>
+                     <p class="header__title--email ">
+                         info@gmail.com
+                     </p>
+                 </div>
+                 <div class="header__phone ">
+                     <div class="header__phone--button">
+                         <i class="fas fa-phone-alt"></i>
+                         <span>0912345678</span>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </header>
+     <!-- .menu__tab  -->
+    <div id="menu-nav" class="menu__nav">
+        <ul style="list-style: none; text-transform: uppercase;padding: 20px;">
+            <li id="menu-index" class=""><a href="./index.html">Trang chủ</a></li>
+            <li id="menu-gioithieu"><a href="./gioithieu.html">Giới thiệu</a></li>
+            <li id="menu-dichvu" class="menu__list__item list-dv">
+                <a id="a-dv" href="./dichvu.html">Dịch Vụ</a>
+                <div class="menu__list__icon navbar-expand-md collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapse1" aria-expanded="false">
+                    <i id="plus" class="material-icons">addbox</i>
+                    <i style="display: none;" id="minus" class="fa fa-minus"></i>
+                </div>
+
+            </li>
+            <ul id="collapse1" class="nav-children collapse navbar-collapse">
+                <li class="nav-item"><a href="#">cart 1</a></li>
+                <li class="nav-item"><a href="#">cart 2</a></li>
+
+            </ul>
+            <li id="menu-sanpham" class="menu__list__item"><a id="a-sp" href="sanpham.html">sản phẩm
+
+                </a>
+                <div class="menu__list__icon navbar-expand-md collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapse2" aria-expanded="false">
+                    <i id="plus1" class="material-icons">addbox</i>
+                    <i style="display: none;" id="minus1" class="fa fa-minus"></i>
+                </div>
+
+            </li>
+            <ul id="collapse2" class="nav-children collapse navbar-collapse">
+                <li class="nav-item"><a href="#">cart 1</a></li>
+                <li class="nav-item"><a href="#">cart 2</a></li>
+
+            </ul>
+            <li id="menu-tintuc"><a href="tintuc.html">tin tức</a></li>
+            <li id="menu-lienhe"><a href="lienhe.html">liên hệ</a></li>
+        </ul>
+    </div>
+     <!-- bg-dark  -->
+     <div id="over-dark" onclick="handleOver()" class="over-dark"></div>
+     <!-- navbar  -->
+
+     <nav id="navbar" class="navbar navbar-expand-md ">
+
+        <button id="btn-menu" onclick="handleMenu()" class="navbar-toggler " type="button" data-toggle="collapse"
+            data-target="#11" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+
+            <i class="material-icons ">dashboard</i>
+
+        </button>
+        <div class="collapse navbar-collapse" id="navbar11">
+            <ul class="navbar-nav item--border m-auto">
+                <li id="index" class="nav-item ">
+                    <a class="nav-link" href="./index.html">trang chủ</a>
+                </li>
+                <li id="gioithieu" class="nav-item item--border ">
+                    <a class="nav-link " href="./gioithieu.html">giới thiệu</a>
+                </li>
+                <li id="dichvu" class="nav-item item--border ">
+                    <a class="nav-link " href="./dichvu.html">dịch vụ</a>
+                    </a>
+
+                    <ul class="nav__children">
+                        <li>
+                            <a href="#">cart 1
+
+                        </li>
+                        <li class="nav-item"><a href="#">cart 2</a></li>
+
+                    </ul>
+
+                </li>
+                <li id="sanpham" class="nav-item item--border ">
+                    <a class="nav-link " href="./sanpham.html">sản phẩm</a>
+
+                    <ul class="nav__children ">
+                        <li class="nav-item nav__children--show ">
+                            <a href="#">cart 1 </a>
+                            <ul class="nav__children2">
+                                <li><a href="#">cart 1-1</a></li>
+                                <li><a href="#">cart 1-2</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="#">cart 2</a></li>
+
+                    </ul>
+
+                </li>
+                <li id="tintuc" class="nav-item item--border ">
+                    <a class="nav-link " href="./tintuc.html">tin tức</a>
+                </li>
+                <li id="lienhe" class="nav-item">
+                    <a class="nav-link" href="./lienhe.html">liên hệ</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+     <!-- menu list gioi thieu  -->
+     <div id="menu-list" class="menu__list">
+         <ul class="list-group">
+             <!-- danh muc  -->
+             <li class="list-group-item  item list-control">
+                 <span>
+                     danh mục
+                 </span></li>
+             <!-- in nhanh  -->
+             <li class="list-group-item  item list-item ">
+                 <i class="fa fa-crosshairs"></i>
+                 <span>
+                     In nhanh
+                 </span></li>
+
+             <li class="list-group-item  item list-text">
+                 <i class="fa fa-long-arrow-right"></i>
+
+                 <span>
+                     In nhanh
+                 </span></li>
+             <!-- an pham thuong mai  -->
+             <li class="list-group-item item  list-item">
+                 <i class="fa fa-crosshairs"></i>
+                 <span>
+                     Ấn phẩm thương mại
+                 </span></li>
+             <li class="list-group-item  item   list-text">
+                 <i class="fa fa-long-arrow-right"></i>
+                 <span>
+                     Danh thiếp
+                 </span></li>
+             <li class="list-group-item  item list-text ">
+                 <i class="fa fa-long-arrow-right"></i>
+                 <span>
+                     tờ rơi
+                 </span></li>
+             <li class="list-group-item  item list-text ">
+                 <i class="fa fa-long-arrow-right"></i>
+                 <span>
+                     Thiệp cưới,thiệp mời
+                 </span>
+             </li>
+             <!-- Tạp chí sách -->
+             <li class="list-group-item  item list-item ">
+                 <i class="fa fa-crosshairs"></i>
+                 <span>
+                     Tạp chí sách
+                 </span></li>
+             <li class="list-group-item  item   list-text">
+                 <i class="fa fa-long-arrow-right"></i>
+                 <span>
+                     Danh thiếp
+                 </span></li>
+             <li class="list-group-item  item list-text ">
+                 <i class="fa fa-long-arrow-right"></i>
+                 <span>
+                     tờ rơi
+                 </span></li>
+             <li class="list-group-item  item list-text ">
+                 <i class="fa fa-long-arrow-right"></i>
+                 <span>
+                     Thiệp cưới,thiệp mời
+                 </span>
+             </li>
+             <!-- In lịch, in lịch tết -->
+             <li class="list-group-item  item list-item ">
+                 <i class="fa fa-crosshairs"></i>
+                 <span>
+                     In lịch, in lịch tết
+                 </span></li>
+             <li class="list-group-item  item   list-text">
+                 <i class="fa fa-long-arrow-right"></i>
+                 <span>
+                     Danh thiếp
+                 </span></li>
+             <li class="list-group-item  item list-text ">
+                 <i class="fa fa-long-arrow-right"></i>
+                 <span>
+                     tờ rơi
+                 </span></li>
+             <li class="list-group-item  item list-text ">
+                 <i class="fa fa-long-arrow-right"></i>
+                 <span>
+                     Thiệp cưới,thiệp mời
+                 </span>
+             </li>
+             <!-- In nhãn decal mác -->
+             <li class="list-group-item  item list-item ">
+                 <i class="fa fa-crosshairs"></i>
+                 <span>
+                     In nhãn decal mác
+                 </span></li>
+             <li class="list-group-item  item   list-text">
+                 <i class="fa fa-long-arrow-right"></i>
+                 <span>
+                     Danh thiếp
+                 </span></li>
+             <li class="list-group-item  item list-text ">
+                 <i class="fa fa-long-arrow-right"></i>
+                 <span>
+                     tờ rơi
+                 </span></li>
+             <li class="list-group-item  item list-text ">
+                 <i class="fa fa-long-arrow-right"></i>
+                 <span>
+                     Thiệp cưới,thiệp mời
+                 </span>
+             </li>
+
+         </ul>
+     </div>
+     <div class="introduce">
+
+         <!-- banner  -->
+         <section class="banner">
+
+             <div class="banner-over"></div>
+             <h1> giới thiệu </h1>
+         </section>
+         <!-- link component  -->
+         <div class="linkGT">
+             <span>Trang chủ</span>
+             <i class="fas fa-long-arrow-alt-right"></i> <!-- <i class="fa fa-arrow-right"></i> -->
+             <span>Giới thiệu</span>
+         </div>
+
+         <section class="listContent ">
+             <div class="container">
+                 <button onclick="handleClickListInfo() " class="listContent__menu">
+                     <i class="material-icons ">dashboard</i>
+
+                 </button>
+
+                 <div class="listContent__content row">
+                     <div class="listContent__left col-lg-3">
+                         <ul class="list-group">
+                             <!-- danh muc  -->
+                             <li class="list-group-item  item list-control">
+                                 <span>
+                                     danh mục
+                                 </span></li>
+                             <!-- in nhanh  -->
+                             <li class="list-group-item  item list-item ">
+                                 <i class="fa fa-crosshairs"></i>
+                                 <span>
+                                     In nhanh
+                                 </span></li>
+
+                             <li class="list-group-item  item list-text">
+                                 <i class="fa fa-long-arrow-right"></i>
+
+                                 <span>
+                                     In nhanh
+                                 </span></li>
+                             <!-- an pham thuong mai  -->
+                             <li class="list-group-item item  list-item">
+                                 <i class="fa fa-crosshairs"></i>
+                                 <span>
+                                     Ấn phẩm thương mại
+                                 </span></li>
+                             <li class="list-group-item  item   list-text">
+                                 <i class="fa fa-long-arrow-right"></i>
+                                 <span>
+                                     Danh thiếp
+                                 </span></li>
+                             <li class="list-group-item  item list-text ">
+                                 <i class="fa fa-long-arrow-right"></i>
+                                 <span>
+                                     tờ rơi
+                                 </span></li>
+                             <li class="list-group-item  item list-text ">
+                                 <i class="fa fa-long-arrow-right"></i>
+                                 <span>
+                                     Thiệp cưới,thiệp mời
+                                 </span>
+                             </li>
+                             <!-- Tạp chí sách -->
+                             <li class="list-group-item  item list-item ">
+                                 <i class="fa fa-crosshairs"></i>
+                                 <span>
+                                     Tạp chí sách
+                                 </span></li>
+                             <li class="list-group-item  item   list-text">
+                                 <i class="fa fa-long-arrow-right"></i>
+                                 <span>
+                                     Danh thiếp
+                                 </span></li>
+                             <li class="list-group-item  item list-text ">
+                                 <i class="fa fa-long-arrow-right"></i>
+                                 <span>
+                                     tờ rơi
+                                 </span></li>
+                             <li class="list-group-item  item list-text ">
+                                 <i class="fa fa-long-arrow-right"></i>
+                                 <span>
+                                     Thiệp cưới,thiệp mời
+                                 </span>
+                             </li>
+                             <!-- In lịch, in lịch tết -->
+                             <li class="list-group-item  item list-item ">
+                                 <i class="fa fa-crosshairs"></i>
+                                 <span>
+                                     In lịch, in lịch tết
+                                 </span></li>
+                             <li class="list-group-item  item   list-text">
+                                 <i class="fa fa-long-arrow-right"></i>
+                                 <span>
+                                     Danh thiếp
+                                 </span></li>
+                             <li class="list-group-item  item list-text ">
+                                 <i class="fa fa-long-arrow-right"></i>
+                                 <span>
+                                     tờ rơi
+                                 </span></li>
+                             <li class="list-group-item  item list-text ">
+                                 <i class="fa fa-long-arrow-right"></i>
+                                 <span>
+                                     Thiệp cưới,thiệp mời
+                                 </span>
+                             </li>
+                             <!-- In nhãn decal mác -->
+                             <li class="list-group-item  item list-item ">
+                                 <i class="fa fa-crosshairs"></i>
+                                 <span>
+                                     In nhãn decal mác
+                                 </span></li>
+                             <li class="list-group-item  item   list-text">
+                                 <i class="fa fa-long-arrow-right"></i>
+                                 <span>
+                                     Danh thiếp
+                                 </span></li>
+                             <li class="list-group-item  item list-text ">
+                                 <i class="fa fa-long-arrow-right"></i>
+                                 <span>
+                                     tờ rơi
+                                 </span></li>
+                             <li class="list-group-item  item list-text ">
+                                 <i class="fa fa-long-arrow-right"></i>
+                                 <span>
+                                     Thiệp cưới,thiệp mời
+                                 </span>
+                             </li>
+
+                         </ul>
+                     </div>
+                     <div class="listContent__right col-lg-9 col-md-12 col-sm-12">
+
+                         <div class="listContent__right__title">
+                             <h2>MỘT VÀI LỜI <b style="color: #373737;">VỀ CHÚNG TÔI</b></h2>
+                         </div>
+                         <div class="listContent__right__content">
+                             <p>
+                                 Công ty TNHH Kala Việt Nam – Với tên thương hiệu là Kalapress được thành lập từ năm
+                                 2015
+                                 bởi những
+                                 cá
+                                 nhân trẻ có kiến thức chuyên sâu và đầy nhiệt huyết trong lĩnh vực in ấn với mong muốn
+                                 cung
+                                 cấp cho
+                                 Quý
+                                 khách hàng những sản phẩm in chất lượng cao với giá cả hợp lý và nhanh chóng.</p>
+
+                             <p>Trong suốt gần hai năm hoạt động, Kalapress luôn lấy niềm tin của Quý khách làm động lực
+                                 phấn đấu để
+                                 phát triển. Chúng tôi đã và đang không ngừng cố gắng nâng cao chất lượng sản phẩm vì
+                                 chúng
+                                 tôi hiểu
+                                 rằng, chất lượng sản phẩm là yếu tố tiên quyết giúp Kalapress tạo dựng niềm tin nơi Quý
+                                 khách.</p>
+
+                             <p> Kalapress được trang bị đầy đủ máy móc thiết bị, từ máy in kỹ thuật số, máy in offset
+                                 tờ
+                                 rời,
+                                 offset
+                                 cuộn đến các máy thành phẩm hiện đại nhất. Quy trình sản xuất khép kín từ khâu thiết
+                                 kế,
+                                 chế bản,
+                                 đến
+                                 in và thành phẩm, nhằm đáp ứng tối đa nhu cầu in của khách hàng.</p>
+
+                             <p>Từ bao đời nay, có thể nói nhu cầu xây dựng và vun đắp mối quan hệ giữa người với người
+                                 đã
+                                 trở thành
+                                 một trong những nhu cầu không thể thiếu trong văn hóa ứng xử của người Việt. Thấu hiểu
+                                 được
+                                 nhu cầu
+                                 thiết thực đó của Quý khách cũng như bắt nhịp cùng với thời đại kỹ thuật số hiện nay,
+                                 Kalapress sẵn
+                                 sàng tạo ra các ấn phẩm “độc bản”, kể cả sách bìa cứng, hộp bồi cứng cao cấp để Quý
+                                 khách
+                                 có thể
+                                 dành
+                                 tặng riêng cho đối tác, người thân hay bạn bè bên cạnh các sản phẩm thông dụng như danh
+                                 thiếp,
+                                 phong
+                                 bì, thiệp mời, catalogues, decal, nhãn, v.v...</p>
+
+                             <p> Đặc biệt, khi đến với Kalapress, Quý khách sẽ được cung cấp dịch vụ in proof chất lượng
+                                 cao
+                                 khi có
+                                 nhu
+                                 cầu. Đây là một trong những dịch vụ cao cấp của chúng tôi, sau khi thiết kế một quyển
+                                 tạp
+                                 chí hoặc
+                                 bao
+                                 bì, nếu Quý khách cần in proof để mang đến cho nhà in hoặc muốn biết thực tế sản phẩm
+                                 như
+                                 thế nào
+                                 thì
+                                 xin đừng ngần ngại liên hệ với chúng tôi, chúng tôi cam kết sẽ cung cấp cho Quý khách
+                                 những
+                                 sản
+                                 phẩm
+                                 đẹp nhất và chất lượng nhất mà quý khách mong đợi.</p>
+                         </div>
+
+                     </div>
+                 </div>
+             </div>
+         </section>
+
+
+
+
+     </div>
+     <footer class="footer">
+         <div class="container">
+             <div class="footer__content row">
+                 <div class="col-lg-5 col-md-4 col-ms-12 footer__content__detail">
+                     <h5>CÔNG TY TNHH KỸ THUẬT SỐ GIA PHÁT</h5>
+                     <div class="detail__content">
+                         <div class="detail__content__item">
+                             <i class="fa fa-home"></i>
+                             <span>
+                                 492/7 Nguyễn Thị Minh Khai, Phường 02, Quận 3, TP Hồ Chí Minh</span>
+                         </div>
+                         <div class="detail__content__item">
+                             <i class="fa fa-home"></i>
+                             <span>ĐKKD: 0305882620</span>
+                         </div>
+                         <div class="detail__content__item">
+                             <i class="fas fa-phone-alt"></i>
+                             <span> 0963 793 793</span>
+                         </div>
+                         <div class="detail__content__item">
+                             <i class="fa fa-envelope"></i>
+                             <span>info@gmail.com</span>
+                         </div>
+
+                     </div>
+                 </div>
+                 <div class="col-lg-3 col-md-4 col-ms-12 footer__content__active">
+
+                     <h5>
+                         LĨNH VỰC HOẠT ĐỘNG
+                     </h5>
+                     <ul>
+                         <li> In kỹ thuật số</li>
+                         <li> In vải chuyển nhiệt</li>
+                         <li> Thi công quảng cáo</li>
+                     </ul>
+                 </div>
+                 <div class="col-lg-4 col-md-4 col-ms-12 footer__content__logo">
+                     <img class="img-fluid" src="./img/pagefb.jpg" alt="page-facebook">
+                 </div>
+             </div>
+         </div>
+     </footer>
+     <!-- zalo  -->
+     <section class="zaloCall">
+         <div class="zaloCall__content">
+             <div class="zaloCall__content__item">
+
+                 <i class="material-icons">phone</i>
+                 <span>0867837422</span>
+
+
+             </div>
+             <div class="zaloCall__content__item">
+                 <a href="https://chat.zalo.me/">
+                     <img src="./img/zalo.png" alt="zalo">
+                     <span>Liên hệ qua zalo</span></a>
+             </div>
+         </div>
+     </section>
+     <!-- Optional JavaScript -->
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="./vender/jquery-3.5.1.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+     </script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+     </script>
+     <script src="./js/handleNavbar.js"></script>
+
+     <script src="./js/main.js"></script>
+ </body>
+
+
+ </html>
